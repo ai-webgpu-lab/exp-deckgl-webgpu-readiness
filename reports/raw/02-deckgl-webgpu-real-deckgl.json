@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "repo": "exp-deckgl-webgpu-readiness",
+    "commit": "99c8c37",
+    "timestamp": "2026-05-20T15:41:14.921Z",
+    "owner": "ai-webgpu-lab",
+    "track": "graphics",
+    "scenario": "deckgl-webgpu-readiness",
+    "notes": "pointCount=2048; arcCount=96; polygonCount=24; layerCount=4; tileCount=18; pickingSamples=128; attributeBufferMB=0.0353; avgViewportUpdateMs=0.0131; backend=webgpu; fallback=false; realAdapter=fallback(The requested module '/@deck.gl/core@^9.0.0?target=es2022' does not provide an export named 'gouraudLighting'); automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-05-20T15:41:16.618Z",
+      "captured_by": "codex"
+    },
+    "capture_scenario_id": "02-deckgl-webgpu-real-deckgl",
+    "capture_url_search": "?mode=real-deckgl"
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 32,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "navigator.gpu available",
+      "required_features": [
+        "texture-compression-bc",
+        "timestamp-query"
+      ],
+      "limits": {
+        "maxTextureDimension2D": 8192,
+        "maxVertexAttributes": 16,
+        "maxBindGroups": 4
+      }
+    },
+    "backend": "webgpu",
+    "fallback_triggered": false,
+    "worker_mode": "main",
+    "cache_state": "warm"
+  },
+  "workload": {
+    "kind": "graphics",
+    "name": "deckgl-webgpu-readiness",
+    "input_profile": "2048-points-96-arcs-24-polygons-18-tiles",
+    "renderer": "deckgl-webgpu-readiness",
+    "model_id": "deckgl-webgpu-readiness",
+    "resolution": "960x540"
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 2840.6,
+      "init_ms": 38.2,
+      "success_rate": 1,
+      "peak_memory_note": "32 GB reported by browser",
+      "error_type": ""
+    },
+    "graphics": {
+      "avg_fps": 60.6,
+      "p95_frametime_ms": 17.5,
+      "scene_load_ms": 38.2,
+      "resolution_scale": 1,
+      "ray_steps": 0,
+      "taa_enabled": false,
+      "visual_artifact_note": "synthetic deck.gl-style WebGPU map layer path; no real deck.gl package yet"
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/02-deckgl-webgpu-real-deckgl.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/exp-deckgl-webgpu-readiness/",
+    "renderer_adapter": {
+      "id": "stub-not-connected",
+      "label": "Renderer Adapter Stub (not connected)",
+      "status": "not-connected",
+      "isReal": false,
+      "version": "n/a",
+      "capabilities": [
+        "scene-load",
+        "frame-pace",
+        "fallback-record"
+      ],
+      "backendHint": "stub",
+      "message": "No real renderer adapter has registered for mode='real-deckgl'. Falling back to the deterministic harness."
+    },
+    "screenshots": [
+      "./reports/screenshots/02-deckgl-webgpu-real-deckgl.png"
+    ]
+  }
+}
